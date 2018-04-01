@@ -16,3 +16,5 @@ example/example-server
 example/hello-updater
 example/public/*
 example/deployment/*
+/example/*.exe
+/example/src/hello-updater/update
