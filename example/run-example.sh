@@ -20,6 +20,7 @@ echo "Building dev version of hello-updater"; echo
 go build -ldflags="-X main.version=dev" -o hello-updater src/hello-updater/main.go
 
 echo "Copying it to deployment folder"; echo
+mkdir deployment
 cp hello-updater deployment/
 
 
