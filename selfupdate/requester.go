@@ -26,6 +26,9 @@ func (httpRequester *HTTPRequester) Fetch(url string) (io.ReadCloser, error) {
 	}
 
 	if resp.StatusCode != 200 {
+		if nil != resp.Body {
+			resp.Body.Close()
+		}
 		return nil, fmt.Errorf("bad http status from %s: %v", url, resp.Status)
 	}
 
