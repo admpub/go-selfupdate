@@ -128,7 +128,7 @@ func (u *Updater) update() error {
 	if err != nil {
 		return err
 	}
-	if u.Info.Version == u.CurrentVersion {
+	if u.Info.Version == "" || u.Info.Version == u.CurrentVersion {
 		return nil
 	}
 	bin, err := u.fetchAndVerifyPatch(old)
@@ -176,7 +176,7 @@ func (u *Updater) FetchInfo() error {
 	if err != nil {
 		return err
 	}
-	if len(u.Info.Sha256) != sha256.Size {
+	if u.Info.Version != "" && len(u.Info.Sha256) != sha256.Size {
 		return errors.New("bad cmd hash in info")
 	}
 	return nil

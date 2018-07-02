@@ -17,7 +17,7 @@ func TestUpdaterFetchMustReturnNonNilReaderCloser(t *testing.T) {
 			return nil, nil
 		})
 	updater := createUpdater(mr)
-	err := updater.BackgroundRun()
+	err := updater.Run()
 	if err != nil {
 		equals(t, "Fetch was expected to return non-nil ReadCloser", err.Error())
 	} else {
@@ -35,7 +35,7 @@ func TestUpdaterWithEmptyPayloadNoErrorNoUpdate(t *testing.T) {
 		})
 	updater := createUpdater(mr)
 
-	err := updater.BackgroundRun()
+	err := updater.Run()
 	if err != nil {
 		t.Errorf("Error occurred: %#v", err)
 	}
@@ -50,7 +50,7 @@ func TestUpdaterWithEmptyPayloadNoErrorNoUpdateEscapedPath(t *testing.T) {
 		})
 	updater := createUpdaterWithEscapedCharacters(mr)
 
-	err := updater.BackgroundRun()
+	err := updater.Run()
 	if err != nil {
 		t.Errorf("Error occurred: %#v", err)
 	}

@@ -12,12 +12,6 @@
   revision = "9955b0ab8708602d411341e55fffd7e0700f86bd"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/sanbornm/go-selfupdate"
-  packages = ["selfupdate"]
-  revision = "bf295275fb1ee4e347c09330ed9a3c76cc19895a"
-
-[[projects]]
   branch = "v0"
   name = "gopkg.in/inconshreveable/go-update.v0"
   packages = [
@@ -29,6 +23,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6d94ef6e19b86b0c8b1c8e7e83e8e42a5eec85bb2dce7e0ca8938e1ca6d163ce"
+  inputs-digest = "2dc15c6a0e0dda650516ca1c04eb3ce579602cb928acda004089b48b0dce8a9d"
   solver-name = "gps-cdcl"
   solver-version = 1
