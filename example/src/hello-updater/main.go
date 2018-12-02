@@ -15,11 +15,12 @@ var updater = &selfupdate.Updater{
 	DiffURL:        "http://localhost:8080/", // The server hosting the binary patch diff for incremental updates
 	Dir:            "update/",                // The directory created by the app when run which stores the cktime file
 	CmdName:        "hello-updater",          // The app name which is appended to the ApiURL to look for an update
-	ForceCheck:     true,                     // For this example, always check for an update unless the version is "dev"
 }
 
 func main() {
 	log.Printf("Hello world I am currently version %v", updater.CurrentVersion)
-	updater.BackgroundRun()
+	updater.FetchInfo()
+	log.Printf("CurrentVersion: %v, new version: %v", updater.CurrentVersion, updater.Info.Version)
+	updater.Run()
 	log.Printf("Next run, I should be %v", updater.Info.Version)
 }
