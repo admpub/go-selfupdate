@@ -26,7 +26,7 @@
 
 [[constraint]]
   branch = "master"
-  name = "github.com/sanbornm/go-selfupdate"
+  name = "github.com/admpub/go-selfupdate"
 
 [[constraint]]
   branch = "v0"

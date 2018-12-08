@@ -1,8 +1,8 @@
 go-selfupdate
 =============
 
-[![GoDoc](https://godoc.org/github.com/sanbornm/go-selfupdate/selfupdate?status.svg)](https://godoc.org/github.com/sanbornm/go-selfupdate/selfupdate)
-[![Build Status](https://travis-ci.org/sanbornm/go-selfupdate.svg?branch=master)](https://travis-ci.org/sanbornm/go-selfupdate)
+[![GoDoc](https://godoc.org/github.com/admpub/go-selfupdate/selfupdate?status.svg)](https://godoc.org/github.com/admpub/go-selfupdate/selfupdate)
+[![Build Status](https://travis-ci.org/admpub/go-selfupdate.svg?branch=master)](https://travis-ci.org/admpub/go-selfupdate)
 
 Enable your Golang applications to self update.  Inspired by Chrome based on Heroku's [hk](https://github.com/heroku/hk).
 
