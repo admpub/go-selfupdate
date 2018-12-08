@@ -67,7 +67,7 @@ var defaultHTTPRequester = HTTPRequester{}
 //  	CmdName:        "myapp", // app name
 //  }
 //  if updater != nil {
-//  	go updater.BackgroundRun()
+//  	go updater.Run()
 //  }
 type Updater struct {
 	CurrentVersion string    // Currently running version.
@@ -89,7 +89,7 @@ func (u *Updater) getExecRelativeDir(dir string) string {
 	return path
 }
 
-// BackgroundRun starts the update check and apply cycle.
+// Run starts the update check and apply cycle.
 func (u *Updater) Run() error {
 	if err := os.MkdirAll(u.getExecRelativeDir(u.Dir), 0777); err != nil {
 		// fail

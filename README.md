@@ -26,7 +26,7 @@ Enable your Golang applications to self update.  Inspired by Chrome based on Her
 	}
 
 	if updater != nil {
-		go updater.BackgroundRun()
+		go updater.Run()
 	}
 
 ### Push Out and Update
