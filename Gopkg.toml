@@ -28,10 +28,6 @@
   branch = "master"
   name = "github.com/admpub/go-selfupdate"
 
-[[constraint]]
-  branch = "v0"
-  name = "gopkg.in/inconshreveable/go-update.v0"
-
 [prune]
   go-tests = true
   unused-packages = true
