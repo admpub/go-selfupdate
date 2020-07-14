@@ -16,7 +16,7 @@ Enable your Golang applications to self update.  Inspired by Chrome based on Her
 
 ### Install library and update/patch creation utility
 
-`go get -u github.com/sanbornm/go-selfupdate/...`
+`go get -u github.com/admpub/go-selfupdate/...`
 
 ### Enable your App to Self Update
 
